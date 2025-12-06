@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 20% 4%;
+
+    --secondary: 270 91% 65%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 220 20% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom Design Tokens */
+    --neon-cyan: 180 100% 50%;
+    --neon-purple: 270 91% 65%;
+    --neon-pink: 330 100% 65%;
+    --dark-base: 220 20% 4%;
+    --dark-elevated: 220 20% 8%;
+    --dark-surface: 220 20% 12%;
+
+    /* Glow effects */
+    --glow-cyan: 0 0 20px hsl(180 100% 50% / 0.5), 0 0 40px hsl(180 100% 50% / 0.3);
+    --glow-purple: 0 0 20px hsl(270 91% 65% / 0.5), 0 0 40px hsl(270 91% 65% / 0.3);
+    --glow-warm: 0 0 20px hsl(30 80% 50% / 0.4), 0 0 40px hsl(30 80% 50% / 0.2);
+
+    /* Theme-specific accents */
+    --theme-accent: var(--neon-cyan);
+    --theme-glow: var(--glow-cyan);
+  }
+
+  [data-theme="classical"] {
+    --theme-accent: 30 80% 55%;
+    --theme-glow: var(--glow-warm);
+    --primary: 30 80% 55%;
+  }
+
+  [data-theme="none"] {
+    --theme-accent: 220 15% 50%;
+    --theme-glow: 0 0 15px hsl(220 15% 50% / 0.3);
+    --primary: 220 15% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html, body, #root {
+    @apply h-full w-full overflow-hidden;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .neon-text {
+    text-shadow: 
+      0 0 10px hsl(var(--theme-accent) / 0.8),
+      0 0 20px hsl(var(--theme-accent) / 0.6),
+      0 0 30px hsl(var(--theme-accent) / 0.4);
+  }
+
+  .neon-button {
+    @apply relative transition-all duration-300;
+    box-shadow: 
+      0 0 15px hsl(var(--theme-accent) / 0.3),
+      inset 0 0 15px hsl(var(--theme-accent) / 0.1);
+  }
+
+  .neon-button:hover {
+    box-shadow: 
+      0 0 25px hsl(var(--theme-accent) / 0.5),
+      0 0 50px hsl(var(--theme-accent) / 0.3),
+      inset 0 0 20px hsl(var(--theme-accent) / 0.2);
+    transform: scale(1.05);
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md;
+    background: hsl(var(--dark-elevated) / 0.6);
+    border: 1px solid hsl(var(--theme-accent) / 0.2);
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-equalizer {
+    animation: equalizer 0.5s ease-in-out infinite;
+  }
+
+  .animate-sine-wave {
+    animation: sine-wave 2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes equalizer {
+  0%, 100% {
+    transform: scaleY(0.2);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes sine-wave {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* GPU-optimized seamless scroll animation */
+@keyframes seamless-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 8s linear infinite;
+}
