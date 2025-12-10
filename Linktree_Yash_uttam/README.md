@@ -16,7 +16,6 @@ A modern, responsive personal link hub and portfolio showcase featuring a dynami
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
 
 ## Getting Started
 
@@ -77,6 +76,3 @@ npm run preview
 5. Vercel will automatically detect Vite and configure the build settings.
 6. Click "Deploy".
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
