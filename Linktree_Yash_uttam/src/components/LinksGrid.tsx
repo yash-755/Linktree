@@ -16,7 +16,7 @@ import {
 const links = [
   { icon: LinkedInIcon, label: 'LinkedIn', href: 'https://www.linkedin.com/in/yash-uttam' },
   { icon: GitHubIcon, label: 'GitHub', href: 'https://github.com/yash-755' },
-  { icon: ResumeIcon, label: 'Resume', href: '/myresume.pdf' },
+  { icon: ResumeIcon, label: 'Resume (2026)', href: '/yash-uttam-resume-2026.pdf' },
   { icon: PortfolioIcon, label: 'Portfolio', href: '#portfolio' },
   { icon: HackerRankIcon, label: 'HackerRank', href: 'https://www.hackerrank.com/profile/ur731084' },
   { icon: LeetCodeIcon, label: 'LeetCode', href: 'https://leetcode.com/u/Yash_Uttam/' },
