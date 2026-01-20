@@ -7,7 +7,7 @@ A modern, fast, and fully responsive **Linktree-style personal portfolio website
 ## 🚀 Live Demo
 
 🔗 **Deployed on Vercel:**
-👉 [https://linktree-4djtpxz0d-yash-uttams-projects.vercel.app/)
+👉 https://linktree-4djtpxz0d-yash-uttams-projects.vercel.app
 
 ---
 
