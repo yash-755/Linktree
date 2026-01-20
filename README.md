@@ -11,8 +11,6 @@ A modern, fast, and fully responsive **Linktree-style personal portfolio website
 
 ---
 
----
-
 ## ✨ Features
 
 * 🎨 **Modern UI & Dynamic Themes**
@@ -52,7 +50,7 @@ Linktree_Yash_uttam/
 ├── vite.config.ts
 └── README.md
 ```
-
+---
 
 ## 📄 Resume Handling
 
