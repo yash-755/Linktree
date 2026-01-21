@@ -1,4 +1,4 @@
-# 🌐 Linktree – Personal Portfolio Hub
+# 🌐 Linktree – Personal Accounts Hub
 
 A modern, fast, and fully responsive **Linktree-style personal portfolio website** built to showcase professional profiles, resume, and social platforms in one place. Designed with clean UI, smooth animations, and optimized deployment on **Vercel**.
 
